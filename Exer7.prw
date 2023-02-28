@@ -6,7 +6,7 @@ Programa que informa se um aluno foi aprovado ou reprovado
 @since   27/02/2023
 @version 1.0
 /*/
-//-------------------------------------------------------------------
+//--------------------------------------------------------------------
 User Function notaspar()
 	Local n1:=0
 	Local n2:=0
