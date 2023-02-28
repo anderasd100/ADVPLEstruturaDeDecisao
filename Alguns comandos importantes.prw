@@ -19,6 +19,5 @@ Return()
 n1:= Val(FwInputBox("Informe o primeiro número: ))+; + CRLF
 n1:= Val(FwInputBox("Informe o primeiro número: ))+ " " + CRLF
 n1+= "Média do aluno é: " +cValtoChar(media)
-
-
 */
+//Deixando uma frase em negrito: <b>Media</b>
