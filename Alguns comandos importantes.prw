@@ -14,3 +14,11 @@
 //Exemplo:
 User Function mediaalu()
 Return()
+// Formas de quebrar linhas e dar espaçamentos entre os caracteres:
+/*
+n1:= Val(FwInputBox("Informe o primeiro número: ))+; + CRLF
+n1:= Val(FwInputBox("Informe o primeiro número: ))+ " " + CRLF
+n1+= "Média do aluno é: " +cValtoChar(media)
+
+
+*/
