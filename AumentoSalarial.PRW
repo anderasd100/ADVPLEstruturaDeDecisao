@@ -17,42 +17,39 @@ o novo salário, após o aumento.
 /*/
 //-------------------------------------------------------------------
 User Function Tabajara()
-    Local nome:=""
     Local salario:=0
     Local aumento, novosalario :=0
-    nome:=FwInputBox("Informe seu nome: ")
-    salario:=Val(FwInputBox(+cValToChar(nome)+ " !"+;
-        Chr(10)+"Informe seu salário: "))
+    salario:=Val(FwInputBox("Informe seu salário: "))
     if (salario <=200)
         aumento:=(salario*20)/100
         novosalario:=(aumento+salario)
-        Alert("Salário antes do reajuste: "+cValToChar(salario);
-        Chr(10)+ "O percentual de aumento aplicado: 20%";
-        Chr(10)+ "O valor do aumento: "cValToChar(aumento);
-        Chr(10)+ "O novo salário, após o aumento: "+cValToChar(novosalario))
-        endif
-    if (salario >=200 .And. <=700)
+        Alert("Salário antes do reajuste: R$"+cValToChar(salario)+;
+        CHR(10)+ "O percentual de aumento aplicado: 20%"+;
+        CHR(10)+ "O valor do aumento: R$"+cValToChar(aumento)+;
+        CHR(10)+ "O novo salário, após o aumento: R$ "+cValToChar(novosalario))
+        ENDIF
+    if (salario >=200 .And. salario<=700)
         aumento:=(salario*15)/100
         novosalario:=(aumento+salario)
-        Alert("Salário antes do reajuste: "+cValToChar(salario);
-        Chr(10)+ "O percentual de aumento aplicado: 15%";
-        Chr(10)+ "O valor do aumento: "cValToChar(aumento);
-        Chr(10)+ "O novo salário, após o aumento: "+cValToChar(novosalario))
-        endif
-    if (salario >=700 .And. <=1500)
+        Alert("Salário antes do reajuste: R$ "+cValToChar(salario)+;
+        CHR(10)+ "O percentual de aumento aplicado: 15%"+;
+        CHR(10)+ "O valor do aumento: R$ "+cValToChar(aumento)+;
+        CHR(10)+ "O novo salário, após o aumento: R$ "+cValToChar(novosalario))
+        ENDIF
+    if (salario >=700 .And. salario<=1500)
         aumento:=(salario*10)/100
         novosalario:=(aumento+salario)
-        Alert("Salário antes do reajuste: "+cValToChar(salario);
-        Chr(10)+ "O percentual de aumento aplicado: 10%";
-        Chr(10)+ "O valor do aumento: "cValToChar(aumento);
-        Chr(10)+ "O novo salário, após o aumento: "+cValToChar(novosalario))
-        endif
+        Alert("Salário antes do reajuste: R$ "+cValToChar(salario)+;
+        CHR(10)+ "O percentual de aumento aplicado: 10%"+;
+        CHR(10)+ "O valor do aumento: R$ "+cValToChar(aumento)+;
+        CHR(10)+ "O novo salário, após o aumento: R$ "+cValToChar(novosalario))
+        ENDIF
     if (salario >1500)
         aumento:=(salario*5)/100
         novosalario:=(aumento+salario)
-        Alert("Salário antes do reajuste: "+cValToChar(salario);
-        Chr(10)+ "O percentual de aumento aplicado: 5%";
-        Chr(10)+ "O valor do aumento: "cValToChar(aumento);
-        Chr(10)+ "O novo salário, após o aumento: "+cValToChar(novosalario))
-        endif
+        Alert("Salário antes do reajuste: R$ "+cValToChar(salario)+;
+        CHR(10)+ "O percentual de aumento aplicado: 5%"+;
+        CHR(10)+ "O valor do aumento: R$ "+cValToChar(aumento)+;
+        CHR(10)+ "O novo salário, após o aumento: R$"+cValToChar(novosalario))
+        ENDIF
         Return()
