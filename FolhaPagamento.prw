@@ -44,7 +44,7 @@ Do CASE
       totaldesc:=(ir+inss+fgts)
       ctexto += "Total de desconto: R$ "+cValToChar(totaldesc) +CRLF
       ctexto += "Salário líquido: R$ "+cValToChar(slabruto-totaldesc)
-      Alert(ctexto)
+      Alert(ctexto)// Comando para mostrar de uma vez só na tela
 
       case slabruto <=1500
       ctexto := "Salário Bruto: R$ "+cValToChar(slabruto) +CRLF
