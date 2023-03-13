@@ -14,22 +14,35 @@ inteiro ou decimal.
 USER FUNCTION Leia2n()
     LOCAL nN1       :=0
     LOCAL nN2       :=0
-    LOCAL nResult   :=0
     LOCAL nsoma     :=0
+    LOCAL nrestdiv  :=0
     LOCAL cOperacao :=""
     LOCAL cTexto    :=""
     nN1:=Val(FwInputBox("Informe o 1° número: "))
     nN2:=Val(FwInputBox("Informe o 2° número: "))
-    cTexto+=("Escolha uma operação que Você deseja fazer: ")+CRLF
-    cTexto+=("Digite + para SOMA")+CRLF
-    cTexto+=("Digite - para SUBTRAÇÃO")+CRLF
-    cTexto+=("Digite * para MULTIPLICAÇÃO")+CRLF
-    cTexto+=("Digite / para DIVISÃO")+CRLF
+    nsoma    := nN1+nN2 
+    nrestdiv := nN1%nN2 
+    cTexto+="Escolha uma das operação que Você deseja fazer: "+CRLF
+    cTexto+="Digite + para SOMA"+CRLF
+    cTexto+="Digite - para SUBTRAÇÃO"+CRLF
+    cTexto+="Digite * para MULTIPLICAÇÃO"+CRLF
+    cTexto+="Digite / para DIVISÃO"
     Alert(cTexto)
     cOperacao:=FwInputBox("Informe a operação: ")
     DO CASE
-        CASE cOperacao =="+" .AND. cOperacao>0
-        nsoma:= nN1+nN2 
+        CASE cOperacao =="+" .AND. nsoma>0
+        Alert("A soma é: "+cValToChar(nsoma)+ " é um número positivo!")
 
+        CASE cOperacao =="+" .AND. nsoma<0
+        Alert("A soma é: "+cValToChar(nsoma)+ " é um número negativo!")
 
+         CASE cOperacao =="/" .AND. nrestdiv==0 
+        Alert("O valor da divisão é: "+cValToChar(nsoma)+ " é um número par!")
+
+        CASE cOperacao =="/" .AND. nrestdiv<>0
+        Alert("O valor da divisão é: "+cValToChar(nsoma)+ " é um número ímpar!")
+        
+            OTHERWISE
+        Alert("Error! Operação informada não encontrado!!")
+            END
             RETURN()
